@@ -3,30 +3,30 @@
 
 	<groupId>org.tektutor</groupId>
 	<artifactId>main</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<parent>
 		<groupId>org.tektutor</groupId>
 		<artifactId>tektutor-crm-app</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<dependencies>
 	     <dependency>
 		<groupId>org.tektutor</groupId>
 		<artifactId>frontend</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.0-SNAPSHOT</version>
 	     </dependency>
 	     <dependency>
 		<groupId>org.tektutor</groupId>
 		<artifactId>businesslayer</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.0-SNAPSHOT</version>
 	     </dependency>
 	     <dependency>
 		<groupId>org.tektutor</groupId>
 		<artifactId>dataaccesslayer</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.0-SNAPSHOT</version>
 	     </dependency>
 	</dependencies>
 
