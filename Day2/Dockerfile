@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Jeganathan Swaminathan <jegan@tektutor.org>
 
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server openjdk-jdk-8-headless maven git iputils-ping net-tools vim
 RUN mkdir /var/run/sshd
 RUN echo 'root:root' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
