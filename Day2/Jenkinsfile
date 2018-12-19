@@ -1,0 +1,19 @@
+pipeline {
+
+	agent { master }
+
+	stages {
+		stage('Clone GitHub Project') {
+			steps {
+				git 'https://github.com/tektutor/jenkins-bengaluru-dec-2018.git'
+			}
+		}
+		stage('Build Docker Image') {
+			steps {
+				sh 'cd Day2'
+				sh 'docker build -t tektutor/jenkins-slave'
+			}
+		}
+	}
+
+}
