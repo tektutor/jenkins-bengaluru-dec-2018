@@ -12,12 +12,8 @@ pipeline {
 				sh 'docker build -t tektutor/jenkins-slave Day2'
 			}
 		}
-	}
-
-	agent { 'tektutor/jenkins-slave' }
-	
-	stages {
 		stage('Compile Maven Project') {
+			agent { docker 'tektutor/jenkins-slave' }
 			steps {
 				sh 'mvn clean package'
 			}
