@@ -16,7 +16,7 @@ pipeline {
 			agent { docker 'tektutor/jenkins-slave' }
 			steps {
 				git 'https://github.com/tektutor/jenkins-bengaluru-dec-2018.git'
-				sh 'cd jenkins-bengaluru-dec-2018/Day2/CRM'
+				sh 'cd Day2/CRM'
 				sh 'mvn clean package'
 				junit '**/target/surefire-reports/TEST-*.xml'
 				archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
