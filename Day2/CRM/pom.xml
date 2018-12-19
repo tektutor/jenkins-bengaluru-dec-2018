@@ -24,6 +24,18 @@
 
 	<profiles>
 		<profile>
+			<id>compile</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.2</version>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>test</id>
 			<build>
 				<plugins>
