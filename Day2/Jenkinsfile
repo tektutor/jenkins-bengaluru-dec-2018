@@ -18,7 +18,7 @@ pipeline {
 				git 'https://github.com/tektutor/jenkins-bengaluru-dec-2018.git'
 				sh 'cd Day2/CRM;mvn clean package'
 				junit '**/target/surefire-reports/TEST-*.xml'
-				archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+				archiveArtifacts artifacts: 'Day2/CRM/main/target/*.jar', fingerprint: true
 			}
 		}
 	}
