@@ -10,7 +10,7 @@ pipeline {
 		stage('Build Docker Image') {
 			steps {
 				sh 'cd Day2'
-				sh 'docker build -t tektutor/jenkins-slave'
+				sh 'docker build -t tektutor/jenkins-slave .'
 			}
 		}
 	}
