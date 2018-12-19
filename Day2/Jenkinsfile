@@ -15,6 +15,7 @@ pipeline {
 		stage('Compile Maven Project') {
 			agent { docker 'tektutor/jenkins-slave' }
 			steps {
+				git 'https://github.com/tektutor/jenkins-bengaluru-dec-2018.git'
 				sh 'cd Day2/CRM'
 				sh 'mvn clean package'
 			}
