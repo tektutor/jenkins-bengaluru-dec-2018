@@ -9,11 +9,11 @@ pipeline {
 		}
 		stage('Build Docker Image') {
 			steps {
-				sh 'docker build -t tektutor/jenkins-slave Day3'
+				sh 'docker build -t tektutor/jenkins-slave:latest Day3'
 			}
 		}
 		stage('Compile Maven Project') {
-			agent { docker 'tektutor/jenkins-slave' }
+			agent { docker 'tektutor/jenkins-slave:latest' }
 			steps {
 				git 'https://github.com/tektutor/jenkins-bengaluru-dec-2018.git'
 				sh 'cd Day2/CRM;mvn clean package'
